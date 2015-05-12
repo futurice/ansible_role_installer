@@ -9,8 +9,10 @@ role_install -p playbook.yml
 role_install -e ssh://github.com/github_owner/github_repo.git 
 
 # playbook.yml defines
-install_roles:
-  - {uri: 'ssh://github.com/github_owner/github_repo.git'}
+vars:
+  install_roles:
+    - {uri: 'ssh://github.com/github_owner/github_repo.git'}
+    - {uri: 'ssh://github.com/github_owner/github_repo.git', name: 'repo'}
 ```
 
 [*] $ ansible-galaxy install -r requirements.yml --roles-path=roles/ --ignore-errors

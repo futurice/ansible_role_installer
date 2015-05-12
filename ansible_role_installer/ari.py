@@ -2,7 +2,7 @@ import subprocess, yaml
 
 def read_playbook(playbook):
     r = yaml.safe_load(open(playbook, 'r'))
-    return r[0].get('install_roles', []) if r else []
+    return r[0].get('vars', {}).get('install_roles', []) if r else []
 
 def download_role(uri, name=None, path='roles/', cwd=None):
     name = name or uri.split('/')[-1].replace('.git', '')
