@@ -26,7 +26,7 @@ install_requires = ['requests', 'PyYAML']
 
 setup(
     name = "ansible_role_installer",
-    version = "0.1",
+    version = "0.2",
     description = "Install Ansible roles from Git repositories",
     url = "http://github.com/futurice/ansible_role_installer",
     author = "Jussi Vaihia",
